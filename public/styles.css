@@ -60,12 +60,12 @@ figcaption { margin-top: 18px; color: var(--ink-soft); font-size: 24px; line-hei
 .hero-stamp { position: absolute; right: 3vw; bottom: 26px; display: flex; flex-direction: column; align-items: flex-end; color: rgba(17,44,58,.16); font-family: var(--mono); font-size: 24px; }
 .hero-stamp span:first-child { font-size: 48px; line-height: 1; }
 .learning-layout { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(36px, 7vw, 112px); padding: 72px clamp(24px, 8vw, 128px) 110px; max-width: 1800px; margin: auto; }
-.lesson-rail { align-self: start; position: sticky; top: 26px; padding: 28px 24px; border-left: 4px solid var(--blue); background: rgba(255,255,255,.54); }
+.lesson-rail { align-self: start; position: sticky; top: 26px; padding: 28px 24px; border-left: 4px solid var(--blue); background: rgba(255,255,255,.54); min-width: 0; max-width: 100%; }
 .rail-heading { margin-bottom: 14px; font-family: var(--serif); font-size: 30px; font-weight: 700; }
 .progress-copy { font-size: 24px; color: var(--ink-soft); }
 .progress-track { height: 8px; margin: 12px 0 24px; overflow: hidden; background: #d5e0df; }
 .progress-track span { display: block; width: 9%; height: 100%; background: var(--coral); transition: width .3s ease; }
-.lesson-nav { display: grid; gap: 8px; }
+.lesson-nav { display: grid; gap: 8px; min-width: 0; width: 100%; max-width: 100%; }
 .lesson-nav-link { display: flex; align-items: center; gap: 12px; padding: 9px 8px; border-bottom: 1px solid var(--line); color: var(--ink-soft); text-decoration: none; font-size: 24px; font-weight: 700; line-height: 1.2; }
 .lesson-nav-link:hover, .lesson-nav-link.is-active { background: var(--blue-soft); color: var(--ink); }
 .nav-index { min-width: 42px; color: var(--coral); font-family: var(--mono); font-size: 24px; }
@@ -81,11 +81,20 @@ figcaption { margin-top: 18px; color: var(--ink-soft); font-size: 24px; line-hei
 .artwork-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin: 34px 0 42px; }
 .artwork-count-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .artwork-count-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.artwork-count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .artwork { margin: 0; min-width: 0; }
 .artwork .image-trigger { padding: 16px; background: white; box-shadow: 10px 10px 0 rgba(23,108,130,.11); }
 .artwork .image-trigger img { width: 100%; max-height: 470px; object-fit: contain; }
 .artwork-count-2 .image-trigger img { min-height: 280px; }
 .artwork-count-3 .image-trigger img { max-height: 360px; }
+.artwork-featured { grid-column: 1 / -1; }
+.artwork-featured .image-trigger img { max-height: 620px; }
+.artwork-icon .image-trigger img { width: 144px; height: 144px; max-height: 144px; margin-inline: auto; object-fit: contain; }
+.lesson-card#point-extension-7 .artwork-count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#point-extension-10 .artwork-count-2 { grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); }
+#point-extension-10 .artwork:nth-child(2) .image-trigger img { min-height: 0; max-height: 620px; }
+#point-extension-11 .artwork .image-trigger img,
+#point-extension-12 .artwork .image-trigger img { max-height: 700px; }
 .review-block { margin-top: 38px; padding: 28px; background: var(--blue-soft); border-left: 5px solid var(--blue); }
 .review-block h3 { margin: 0 0 20px; color: var(--ink); font-family: var(--serif); font-size: 30px; line-height: 1.2; }
 .questions { display: grid; gap: 14px; }
@@ -99,6 +108,8 @@ figcaption { margin-top: 18px; color: var(--ink-soft); font-size: 24px; line-hei
 .lesson-footer h2 { margin-bottom: 30px; }
 .lesson-footer h2 span { color: #83c5d0; font-style: italic; }
 .footer-link { background: transparent; border-color: var(--paper-light); color: var(--paper-light); }
+.syllabus-source { margin: 28px 0 0; color: #d3e7e9; font-size: 24px; line-height: 1.5; }
+.syllabus-source a { color: #ffffff; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .image-viewer { width: min(95vw, 1400px); max-width: none; max-height: 92vh; padding: 24px; border: 0; background: var(--paper-light); }
 .image-viewer::backdrop { background: rgba(7,24,33,.84); }
 .viewer-bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
@@ -127,7 +138,10 @@ figcaption { margin-top: 18px; color: var(--ink-soft); font-size: 24px; line-hei
   .lesson-card { margin-bottom: 58px; padding: 26px 0 32px; }
   .lesson-copy { font-size: 24px; }
   .artwork-count-2, .artwork-count-3 { grid-template-columns: 1fr; }
+  .artwork-count-4 { grid-template-columns: 1fr; }
+  #point-extension-10 .artwork-count-2 { grid-template-columns: 1fr; }
   .artwork-count-2 .image-trigger img { min-height: 0; }
+  .lesson-card#point-extension-7 .artwork-count-3 { grid-template-columns: 1fr; }
   .review-block { padding: 20px; }
   .lesson-footer { padding: 30px 24px; }
   .next-lesson { min-width: 0; width: 100%; }

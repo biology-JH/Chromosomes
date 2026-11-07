@@ -56,7 +56,7 @@ const lessons = [
   },
   {
     id: "extension-6", number: "EXTENSION 6", title: "Protein shape",
-    text: "Amino acid order affects how a protein folds into a specific 3D shape. Shape determines how the protein works, including an enzyme’s active site.",
+    text: "Different amino-acid sequences give protein molecules different shapes. Shape determines function, including the shape of an enzyme’s active site.",
     images: [
       { src: "/manus-storage/image-21-1_d71bbdd5.png", alt: "A linear sequence of amino acids", caption: "First, the amino acids are in a particular order." },
       { src: "/manus-storage/image-21-2_760a90c5.png", alt: "Folded protein showing its active site", caption: "Then the chain folds into a specific shape." }
@@ -68,29 +68,35 @@ const lessons = [
   },
   {
     id: "extension-7", number: "EXTENSION 7", title: "Proteins and cell function",
-    text: "Proteins have different roles: enzymes control cell reactions, membrane carriers move substances, and receptors bind neurotransmitters.",
-    images: [],
+    text: "DNA controls cell function by controlling protein production. Enzymes control cell reactions, membrane carriers move substances, and receptors bind neurotransmitters.",
+    images: [
+      { src: "/manus-storage/image-22-1_e3d17320.png", alt: "Enzyme protein illustration", caption: "Enzymes control cell reactions.", icon: true },
+      { src: "/manus-storage/image-22-2_6e5a303d.png", alt: "Membrane carrier protein illustration", caption: "Carriers move substances across membranes.", icon: true },
+      { src: "/manus-storage/image-22-3_8ede6de2.png", alt: "Neurotransmitter receptor illustration", caption: "Receptors bind neurotransmitters.", icon: true }
+    ],
     questions: [
-      { q: "Name one role of an enzyme. What does a membrane carrier do?", a: "Enzymes control cell reactions; carriers move substances across membranes." },
-      { q: "What binds a neurotransmitter at a synapse?", a: "A neurotransmitter receptor protein." }
+      { q: "How does DNA control cell function?", a: "By controlling the production of proteins." },
+      { q: "Name three protein roles in cells.", a: "Enzymes control reactions; carriers move substances across membranes; receptors bind neurotransmitters." }
     ]
   },
   {
     id: "extension-8", number: "EXTENSION 8", title: "Protein synthesis",
-    text: "The gene stays in the nucleus. A single-stranded mRNA copy moves to a ribosome in the cytoplasm, where the amino acids are joined into a protein. Detailed transcription and translation are not required.",
+    text: "The gene stays in the nucleus. A single-stranded mRNA copy is made there, moves to the cytoplasm and passes through a ribosome. Its base sequence determines amino-acid order, and the ribosome joins them into a protein. Detailed transcription and translation are not required.",
     images: [
-      { src: "/manus-storage/image-2-1_99437f00.png", alt: "Sequence from DNA gene to mRNA, ribosome, and protein", caption: "The path from gene to protein." },
+      { src: "/manus-storage/image-2-1_99437f00.png", alt: "Sequence from DNA gene to mRNA, ribosome, and protein", caption: "The path from gene to protein.", featured: true },
       { src: "/manus-storage/image-23-1_d29643ba.png", alt: "mRNA copy leaving the nucleus through a nuclear pore", caption: "mRNA carries a gene copy out of the nucleus." },
+      { src: "/manus-storage/image-24-1_1453f349.png", alt: "Single-stranded mRNA showing its base sequence", caption: "The mRNA base sequence determines amino-acid order." },
       { src: "/manus-storage/image-25-1_08a02a78.png", alt: "Ribosome joining amino acids to make a protein", caption: "A ribosome joins amino acids into a protein." }
     ],
     questions: [
-      { q: "What leaves the nucleus and carries a copy of one gene?", a: "mRNA." },
-      { q: "Where are amino acids joined into a protein?", a: "At a ribosome in the cytoplasm." }
+      { q: "Where is mRNA made, and what does it copy?", a: "In the nucleus; it is a copy of one gene." },
+      { q: "What determines the amino-acid sequence in the protein?", a: "The base sequence of the mRNA." },
+      { q: "Where does mRNA pass, and where are amino acids assembled?", a: "mRNA passes through a ribosome, where amino acids are joined into a protein." }
     ]
   },
   {
     id: "extension-9", number: "EXTENSION 9", title: "Gene expression",
-    text: "Most body cells contain the same genes, but express only the genes they need. Beta cells express insulin, red-cell precursors express haemoglobin, and skin cells express keratin.",
+    text: "Most body cells contain the same genes, but many are not expressed because each cell makes only the proteins it needs. Beta cells make insulin, red-cell precursors make haemoglobin, and skin cells make keratin.",
     images: [
       { src: "/manus-storage/image-29-1_86520cbc.png", alt: "Different cell types expressing different genes", caption: "Different cells make different proteins from shared genetic information." }
     ],
@@ -112,15 +118,25 @@ const lessons = [
     ]
   },
   {
-    id: "extension-11-12", number: "EXTENSIONS 11–12", title: "Diploid nuclei",
-    text: "A diploid nucleus contains two sets of chromosomes. Human body cells have 46 chromosomes arranged in 23 pairs.",
+    id: "extension-11", number: "EXTENSION 11", title: "Diploid nuclei",
+    text: "A diploid nucleus contains two sets of chromosomes.",
     images: [
-      { src: "/manus-storage/image-11-1_66c4a9d6.png", alt: "Diploid nucleus with paired chromosomes", caption: "Two sets form pairs." },
-      { src: "/manus-storage/image-9-1_1f6a6559.jpg", alt: "Human chromosome karyotype", caption: "Humans have 23 pairs: 46 chromosomes." }
+      { src: "/manus-storage/image-11-1_66c4a9d6.png", alt: "Diploid nucleus with paired chromosomes", caption: "A diploid nucleus has two chromosome sets." }
     ],
     questions: [
-      { q: "What does diploid mean?", a: "Having two sets of chromosomes." },
-      { q: "How many chromosomes are in a human diploid nucleus?", a: "46 chromosomes, arranged in 23 pairs." }
+      { q: "What does diploid mean?", a: "A nucleus containing two sets of chromosomes." },
+      { q: "How does diploid differ from haploid?", a: "Diploid has two sets; haploid has one set." }
+    ]
+  },
+  {
+    id: "extension-12", number: "EXTENSION 12", title: "Chromosome pairs in humans",
+    text: "A diploid cell has a pair of each type of chromosome. Human diploid cells have 23 pairs (46 chromosomes).",
+    images: [
+      { src: "/manus-storage/image-9-1_1f6a6559.jpg", alt: "Human chromosome karyotype", caption: "The human diploid number is 23 pairs." }
+    ],
+    questions: [
+      { q: "How many copies of each chromosome type are in a diploid cell?", a: "Two, forming a pair." },
+      { q: "How many chromosome pairs are in a human diploid cell?", a: "23 pairs, or 46 chromosomes." }
     ]
   }
 ];
@@ -132,7 +148,7 @@ const progressFill = document.querySelector("#progress-fill");
 
 function renderImage(image, index, total) {
   const figure = document.createElement("figure");
-  figure.className = "artwork";
+  figure.className = image.featured ? "artwork artwork-featured" : image.icon ? "artwork artwork-icon" : "artwork";
   const trigger = document.createElement("button");
   trigger.className = "image-trigger";
   trigger.type = "button";
@@ -222,6 +238,8 @@ function renderLesson(lesson, index) {
 lessons.forEach(renderLesson);
 const finalSection = document.querySelector(".lesson-footer");
 finalSection.id = "lesson-finish";
+const initialAnchor = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+if (initialAnchor) requestAnimationFrame(() => initialAnchor.scrollIntoView({ block: "start" }));
 
 const navLinks = [...document.querySelectorAll(".lesson-nav-link")];
 const observer = new IntersectionObserver((entries) => {
