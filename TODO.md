@@ -1,4 +1,3 @@
-
 # TODO
 
 - [x] **Learning objective, starter, and plenary** — Add a learning objective organized as “What?”, “Why?”, and “How?”; add a starter before the syllabus lesson; and add a plenary at the end.
@@ -8,3 +7,4 @@
 - [x] **Requested diagram sizes** — Enlarge the left protein-synthesis overview under Extension 8, the right haploid-nucleus diagram under Extension 10, and both diploid / karyotype diagrams for points 11 and 12.
 - [x] **Large, readable responsive design** — Make all visible text, including body copy, navigation, controls, and questions, at least 24px. Keep the page concise and make it comfortable to use on desktop, tablet, and mobile.
 - [x] **Sequential learning navigation** — Provide clear navigation so learners can move through the syllabus points in order, with numbered links, progress, and next-point links.
+- [x] **Bilingual Key Terms before Core 1** — Place a polished “Key Terms” section immediately before Core 1. Include exactly 20 high-value challenging biology terms from the lesson, each with its English term and Traditional Chinese translation. Place Genetic Information beside Protein Synthesis and the other two groups beside each other in a second row on wider screens; stack groups on phones. Keep visible glossary text at least 24px.
