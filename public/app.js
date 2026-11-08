@@ -3,7 +3,7 @@ const lessons = [
     id: "core-1", number: "CORE 1", title: "Chromosomes and DNA",
     text: "Chromosomes are structures of coiled DNA inside the nucleus. Genes lie along DNA, so chromosomes carry hereditary information.",
     images: [
-      { src: "/manus-storage/image-6-1_6e83e527.jpg", alt: "DNA double helix", caption: "DNA coils to form chromosomes." }
+      { src: "/images/image-6-1.jpg", alt: "DNA double helix", caption: "DNA coils to form chromosomes." }
     ],
     questions: [
       { q: "What is a chromosome?", a: "A DNA structure that carries genes." },
@@ -14,7 +14,7 @@ const lessons = [
     id: "core-2", number: "CORE 2", title: "Genes code for proteins",
     text: "A gene is a length of DNA that codes for a protein. Proteins are chains of amino acids.",
     images: [
-      { src: "/manus-storage/image-7-1_c2a4a8a8.png", alt: "Diagram locating a gene along chromosome DNA", caption: "A gene is a section of DNA." }
+      { src: "/images/image-7-1.png", alt: "Diagram locating a gene along chromosome DNA", caption: "A gene is a section of DNA." }
     ],
     questions: [
       { q: "Define a gene.", a: "A length of DNA that codes for a protein." },
@@ -25,7 +25,7 @@ const lessons = [
     id: "core-3", number: "CORE 3", title: "Alleles",
     text: "An allele is an alternative form of a gene. The two alleles on a chromosome pair may be the same or different.",
     images: [
-      { src: "/manus-storage/image-8-1_5e50b9f2.png", alt: "Paired chromosomes showing alternative alleles", caption: "A gene can have alternative forms called alleles." }
+      { src: "/images/image-8-1.png", alt: "Paired chromosomes showing alternative alleles", caption: "A gene can have alternative forms called alleles." }
     ],
     questions: [
       { q: "What is an allele?", a: "An alternative form of a gene." },
@@ -36,7 +36,7 @@ const lessons = [
     id: "core-4", number: "CORE 4", title: "Sex inheritance",
     text: "Pair 23 is the sex chromosomes: females are XX and males XY. Eggs carry X; sperm carry X or Y, giving a 1:1 expectation. Each fertilisation is independent.",
     images: [
-      { src: "/manus-storage/image-14-1_b7c522a9.png", alt: "X chromosome and Y chromosome", caption: "Eggs carry X; sperm carry X or Y." }
+      { src: "/images/image-14-1.png", alt: "X chromosome and Y chromosome", caption: "Eggs carry X; sperm carry X or Y." }
     ],
     questions: [
       { q: "Which sex chromosomes are shown for females and males?", a: "Female: XX. Male: XY." },
@@ -47,7 +47,7 @@ const lessons = [
     id: "extension-5", number: "EXTENSION 5", title: "The DNA code",
     text: "The order of bases in a gene determines the order of amino acids in its protein.",
     images: [
-      { src: "/manus-storage/image-20-1_cf04423c.png", alt: "DNA bases paired with amino acids", caption: "The base sequence carries the code." }
+      { src: "/images/image-20-1.png", alt: "DNA bases paired with amino acids", caption: "The base sequence carries the code." }
     ],
     questions: [
       { q: "What does a gene’s base sequence determine?", a: "The amino acid sequence of the protein." },
@@ -58,8 +58,8 @@ const lessons = [
     id: "extension-6", number: "EXTENSION 6", title: "Protein shape",
     text: "Different amino-acid sequences give protein molecules different shapes. Shape determines function, including the shape of an enzyme’s active site.",
     images: [
-      { src: "/manus-storage/image-21-1_d71bbdd5.png", alt: "A linear sequence of amino acids", caption: "First, the amino acids are in a particular order." },
-      { src: "/manus-storage/image-21-2_760a90c5.png", alt: "Folded protein showing its active site", caption: "Then the chain folds into a specific shape." }
+      { src: "/images/image-21-1.png", alt: "A linear sequence of amino acids", caption: "First, the amino acids are in a particular order." },
+      { src: "/images/image-21-2.png", alt: "Folded protein showing its active site", caption: "Then the chain folds into a specific shape." }
     ],
     questions: [
       { q: "What determines the order of amino acids?", a: "The gene’s base sequence." },
@@ -70,9 +70,9 @@ const lessons = [
     id: "extension-7", number: "EXTENSION 7", title: "Proteins and cell function",
     text: "DNA controls cell function by controlling protein production. Enzymes control cell reactions, membrane carriers move substances, and receptors bind neurotransmitters.",
     images: [
-      { src: "/manus-storage/image-22-1_e3d17320.png", alt: "Enzyme protein illustration", caption: "Enzymes control cell reactions.", icon: true },
-      { src: "/manus-storage/image-22-2_6e5a303d.png", alt: "Membrane carrier protein illustration", caption: "Carriers move substances across membranes.", icon: true },
-      { src: "/manus-storage/image-22-3_8ede6de2.png", alt: "Neurotransmitter receptor illustration", caption: "Receptors bind neurotransmitters.", icon: true }
+      { src: "/images/image-22-1.png", alt: "Enzyme protein illustration", caption: "Enzymes control cell reactions.", icon: true },
+      { src: "/images/image-22-2.png", alt: "Membrane carrier protein illustration", caption: "Carriers move substances across membranes.", icon: true },
+      { src: "/images/image-22-3.png", alt: "Neurotransmitter receptor illustration", caption: "Receptors bind neurotransmitters.", icon: true }
     ],
     questions: [
       { q: "How does DNA control cell function?", a: "By controlling the production of proteins." },
@@ -83,10 +83,10 @@ const lessons = [
     id: "extension-8", number: "EXTENSION 8", title: "Protein synthesis",
     text: "The gene stays in the nucleus. A single-stranded mRNA copy is made there, moves to the cytoplasm and passes through a ribosome. Its base sequence determines amino-acid order, and the ribosome joins them into a protein. Detailed transcription and translation are not required.",
     images: [
-      { src: "/manus-storage/image-2-1_99437f00.png", alt: "Sequence from DNA gene to mRNA, ribosome, and protein", caption: "The path from gene to protein.", featured: true },
-      { src: "/manus-storage/image-23-1_d29643ba.png", alt: "mRNA copy leaving the nucleus through a nuclear pore", caption: "mRNA carries a gene copy out of the nucleus." },
-      { src: "/manus-storage/image-24-1_1453f349.png", alt: "Single-stranded mRNA showing its base sequence", caption: "The mRNA base sequence determines amino-acid order." },
-      { src: "/manus-storage/image-25-1_08a02a78.png", alt: "Ribosome joining amino acids to make a protein", caption: "A ribosome joins amino acids into a protein." }
+      { src: "/images/image-2-1.png", alt: "Sequence from DNA gene to mRNA, ribosome, and protein", caption: "The path from gene to protein.", featured: true },
+      { src: "/images/image-23-1.png", alt: "mRNA copy leaving the nucleus through a nuclear pore", caption: "mRNA carries a gene copy out of the nucleus." },
+      { src: "/images/image-24-1.png", alt: "Single-stranded mRNA showing its base sequence", caption: "The mRNA base sequence determines amino-acid order." },
+      { src: "/images/image-25-1.png", alt: "Ribosome joining amino acids to make a protein", caption: "A ribosome joins amino acids into a protein." }
     ],
     questions: [
       { q: "Where is mRNA made, and what does it copy?", a: "In the nucleus; it is a copy of one gene." },
@@ -98,7 +98,7 @@ const lessons = [
     id: "extension-9", number: "EXTENSION 9", title: "Gene expression",
     text: "Most body cells contain the same genes, but many are not expressed because each cell makes only the proteins it needs. Beta cells make insulin, red-cell precursors make haemoglobin, and skin cells make keratin.",
     images: [
-      { src: "/manus-storage/image-29-1_86520cbc.png", alt: "Different cell types expressing different genes", caption: "Different cells make different proteins from shared genetic information." }
+      { src: "/images/image-29-1.png", alt: "Different cell types expressing different genes", caption: "Different cells make different proteins from shared genetic information." }
     ],
     questions: [
       { q: "Do skin cells lack the insulin gene?", a: "No. They carry it but do not express it." },
@@ -109,8 +109,8 @@ const lessons = [
     id: "extension-10", number: "EXTENSION 10", title: "Haploid nuclei",
     text: "A haploid nucleus contains one set of chromosomes. Human gametes—eggs and sperm—have 23 single chromosomes.",
     images: [
-      { src: "/manus-storage/image-10-1_8e963353.jpg", alt: "Egg and sperm cells", caption: "Egg and sperm are gametes." },
-      { src: "/manus-storage/image-11-2_07e59d36.png", alt: "Haploid nucleus with one chromosome set", caption: "A haploid nucleus has one set." }
+      { src: "/images/image-10-1.jpg", alt: "Egg and sperm cells", caption: "Egg and sperm are gametes." },
+      { src: "/images/image-11-2.png", alt: "Haploid nucleus with one chromosome set", caption: "A haploid nucleus has one set." }
     ],
     questions: [
       { q: "What does haploid mean?", a: "Having one set of chromosomes." },
@@ -121,7 +121,7 @@ const lessons = [
     id: "extension-11", number: "EXTENSION 11", title: "Diploid nuclei",
     text: "A diploid nucleus contains two sets of chromosomes.",
     images: [
-      { src: "/manus-storage/image-11-1_66c4a9d6.png", alt: "Diploid nucleus with paired chromosomes", caption: "A diploid nucleus has two chromosome sets." }
+      { src: "/images/image-11-1.png", alt: "Diploid nucleus with paired chromosomes", caption: "A diploid nucleus has two chromosome sets." }
     ],
     questions: [
       { q: "What does diploid mean?", a: "A nucleus containing two sets of chromosomes." },
@@ -132,7 +132,7 @@ const lessons = [
     id: "extension-12", number: "EXTENSION 12", title: "Chromosome pairs in humans",
     text: "A diploid cell has a pair of each type of chromosome. Human diploid cells have 23 pairs (46 chromosomes).",
     images: [
-      { src: "/manus-storage/image-9-1_1f6a6559.jpg", alt: "Human chromosome karyotype", caption: "The human diploid number is 23 pairs." }
+      { src: "/images/image-9-1.jpg", alt: "Human chromosome karyotype", caption: "The human diploid number is 23 pairs." }
     ],
     questions: [
       { q: "How many copies of each chromosome type are in a diploid cell?", a: "Two, forming a pair." },
