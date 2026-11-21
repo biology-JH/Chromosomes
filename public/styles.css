@@ -152,6 +152,10 @@ figcaption { margin-top: 18px; color: var(--ink-soft); font-size: 24px; line-hei
 .question summary { padding: 18px 22px; cursor: pointer; font-size: 24px; font-weight: 700; line-height: 1.45; }
 .question summary::marker { color: var(--coral); }
 .answer { margin: 0; padding: 0 22px 20px; color: var(--ink-soft); font-size: 24px; line-height: 1.5; }
+.open-ended-block { margin-top: 24px; padding: 24px 28px; border: 1px solid #e8c9a9; border-left: 5px solid var(--coral); background: #fff8ee; }
+.open-ended-block h3 { margin: 0 0 12px; color: #7f3e2d; font-family: var(--serif); font-size: 30px; line-height: 1.25; }
+.open-ended-block ul { display: grid; gap: 12px; margin: 0; padding-left: 30px; }
+.open-ended-block li { padding-left: 4px; color: var(--ink); font-size: 24px; line-height: 1.5; }
 .next-lesson { margin-top: 30px; min-width: 310px; }
 .lesson-footer { position: relative; overflow: hidden; scroll-margin-top: 42px; padding: 46px; border-radius: 4px 30px 4px 30px; background: linear-gradient(145deg, #112c3a, #164657); color: var(--paper-light); }
 .lesson-footer::before { position: absolute; top: -130px; right: -70px; width: 330px; height: 330px; border: 2px solid rgba(131,197,208,.18); border-radius: 50%; box-shadow: 0 0 0 28px rgba(131,197,208,.055), 0 0 0 62px rgba(131,197,208,.035); content: ""; pointer-events: none; }

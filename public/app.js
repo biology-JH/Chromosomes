@@ -30,6 +30,9 @@ const lessons = [
     questions: [
       { q: "What is an allele?", a: "An alternative form of a gene." },
       { q: "Can the two alleles in a pair differ?", a: "Yes. They may be the same or different." }
+    ],
+    openEnded: [
+      "A plant has two different alleles for a gene. How might this affect the protein made and the feature you can observe? Explain your reasoning."
     ]
   },
   {
@@ -64,6 +67,9 @@ const lessons = [
     questions: [
       { q: "What determines the order of amino acids?", a: "The gene’s base sequence." },
       { q: "How could a base change affect an enzyme?", a: "It may change the amino acid sequence and folding, altering the active site’s shape." }
+    ],
+    openEnded: [
+      "Trace how a change in a gene’s base sequence could alter an enzyme’s function. Which steps in the chain might be affected?"
     ]
   },
   {
@@ -92,6 +98,9 @@ const lessons = [
       { q: "Where is mRNA made, and what does it copy?", a: "In the nucleus; it is a copy of one gene." },
       { q: "What determines the amino-acid sequence in the protein?", a: "The base sequence of the mRNA." },
       { q: "Where does mRNA pass, and where are amino acids assembled?", a: "mRNA passes through a ribosome, where amino acids are joined into a protein." }
+    ],
+    openEnded: [
+      "Why is mRNA useful if the gene stays in the nucleus? Describe its route and how it helps a protein form."
     ]
   },
   {
@@ -103,6 +112,9 @@ const lessons = [
     questions: [
       { q: "Do skin cells lack the insulin gene?", a: "No. They carry it but do not express it." },
       { q: "Why can body cells behave differently if they share genes?", a: "Different cells express different genes and make different proteins." }
+    ],
+    openEnded: [
+      "A skin cell and a pancreatic beta cell contain many of the same genes. How can selective gene expression help each cell do its job?"
     ]
   },
   {
@@ -217,6 +229,23 @@ function renderLesson(lesson, index) {
   });
   review.append(reviewTitle, questions);
   section.append(review);
+
+  if (lesson.openEnded?.length) {
+    const discussion = document.createElement("section");
+    discussion.className = "open-ended-block";
+    discussion.setAttribute("aria-labelledby", `open-ended-title-${lesson.id}`);
+    const discussionTitle = document.createElement("h3");
+    discussionTitle.id = `open-ended-title-${lesson.id}`;
+    discussionTitle.textContent = "Open-ended · explain your thinking";
+    const prompts = document.createElement("ul");
+    lesson.openEnded.forEach((prompt) => {
+      const item = document.createElement("li");
+      item.textContent = prompt;
+      prompts.append(item);
+    });
+    discussion.append(discussionTitle, prompts);
+    section.append(discussion);
+  }
 
   const next = document.createElement("a");
   next.className = "next-lesson";
