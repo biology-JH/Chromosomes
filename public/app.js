@@ -8,7 +8,14 @@ const lessons = [
     questions: [
       { q: "What is a chromosome?", a: "A DNA structure that carries genes." },
       { q: "Where is DNA found in a cell, and what does it carry?", a: "In the nucleus; it carries genetic information in genes." }
-    ]
+    ],
+    video: {
+      id: "1LywkF8sBtc",
+      heading: "Section 17.1 overview · Chromosomes, genes and proteins",
+      title: "IGCSE Biology — Chromosomes, genes and proteins (topic 17.1)",
+      description: "A concise 5-minute overview from igbiocomplete, organised around the Cambridge IGCSE 0610 section 17.1 syllabus.",
+      sourceUrl: "https://www.youtube.com/watch?v=1LywkF8sBtc"
+    }
   },
   {
     id: "core-2", number: "CORE 2", title: "Genes code for proteins",
@@ -37,7 +44,7 @@ const lessons = [
   },
   {
     id: "core-4", number: "CORE 4", title: "Sex inheritance",
-    text: "Pair 23 is the sex chromosomes: females are XX and males XY. Eggs carry X; sperm carry X or Y, giving a 1:1 expectation. Each fertilisation is independent.",
+    text: "Females are XX; males are XY. Eggs always carry X. An X-bearing sperm gives XX; a Y-bearing sperm gives XY, so each independent fertilisation has an expected 50% chance of either outcome.",
     images: [
       { src: "/images/image-14-1.png", alt: "X chromosome and Y chromosome", caption: "Eggs carry X; sperm carry X or Y." }
     ],
@@ -87,7 +94,14 @@ const lessons = [
   },
   {
     id: "extension-8", number: "EXTENSION 8", title: "Protein synthesis",
-    text: "The gene stays in the nucleus. A single-stranded mRNA copy is made there, moves to the cytoplasm and passes through a ribosome. Its base sequence determines amino-acid order, and the ribosome joins them into a protein. Detailed transcription and translation are not required.",
+    text: "A gene directs protein assembly without leaving the nucleus. Follow the syllabus-limited route from the gene to the finished protein:",
+    steps: [
+      { label: "1 · Copy in the nucleus", text: "The gene remains in the nucleus. An mRNA copy of that gene is made there." },
+      { label: "2 · Move to the cytoplasm", text: "The mRNA carries the gene copy from the nucleus into the cytoplasm." },
+      { label: "3 · Pass through a ribosome", text: "The mRNA passes through a ribosome." },
+      { label: "4 · Assemble the protein", text: "The ribosome joins amino acids. The mRNA base sequence determines their order." }
+    ],
+    syllabusNote: "Detailed transcription and translation are not required for this syllabus point.",
     images: [
       { src: "/images/image-2-1.png", alt: "Sequence from DNA gene to mRNA, ribosome, and protein", caption: "The path from gene to protein.", featured: true },
       { src: "/images/image-23-1.png", alt: "mRNA copy leaving the nucleus through a nuclear pore", caption: "mRNA carries a gene copy out of the nucleus." },
@@ -101,7 +115,14 @@ const lessons = [
     ],
     openEnded: [
       "Why is mRNA useful if the gene stays in the nucleus? Describe its route and how it helps a protein form."
-    ]
+    ],
+    video: {
+      id: "VP4-7RSuSV0",
+      heading: "Paper 4 worked example · Protein synthesis",
+      title: "The Protein Synthesis Answer That Scores Zero | IGCSE Biology Paper 4",
+      description: "A worked Cambridge IGCSE Biology 0610/42 exam question. Focus on the gene staying in the nucleus, the mRNA copy moving to the cytoplasm, and the ribosome assembling amino acids in the order set by mRNA bases.",
+      sourceUrl: "https://www.youtube.com/watch?v=VP4-7RSuSV0"
+    }
   },
   {
     id: "extension-9", number: "EXTENSION 9", title: "Gene expression",
@@ -203,11 +224,62 @@ function renderLesson(lesson, index) {
   copy.textContent = lesson.text;
   section.append(heading, copy);
 
+  if (lesson.steps?.length) {
+    const steps = document.createElement("ol");
+    steps.className = "process-steps";
+    lesson.steps.forEach((step) => {
+      const item = document.createElement("li");
+      const label = document.createElement("strong");
+      label.textContent = step.label;
+      const explanation = document.createElement("span");
+      explanation.textContent = step.text;
+      item.append(label, explanation);
+      steps.append(item);
+    });
+    section.append(steps);
+  }
+
+  if (lesson.syllabusNote) {
+    const note = document.createElement("p");
+    note.className = "process-note";
+    note.textContent = lesson.syllabusNote;
+    section.append(note);
+  }
+
   if (lesson.images.length) {
     const grid = document.createElement("div");
     grid.className = `artwork-grid artwork-count-${lesson.images.length}`;
     lesson.images.forEach((image, imageIndex) => grid.append(renderImage(image, imageIndex, lesson.images.length)));
     section.append(grid);
+  }
+
+  if (lesson.video) {
+    const video = document.createElement("section");
+    video.className = "video-block";
+    video.setAttribute("aria-labelledby", `video-title-${lesson.id}`);
+    const videoTitle = document.createElement("h3");
+    videoTitle.id = `video-title-${lesson.id}`;
+    videoTitle.textContent = "Watch · " + (lesson.video.heading || lesson.video.title);
+    const videoDescription = document.createElement("p");
+    videoDescription.className = "video-description";
+    videoDescription.textContent = lesson.video.description;
+    const frame = document.createElement("div");
+    frame.className = "video-frame";
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${lesson.video.id}?rel=0`;
+    iframe.title = lesson.video.title;
+    iframe.loading = "lazy";
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.allow = "accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    frame.append(iframe);
+    const videoLink = document.createElement("a");
+    videoLink.href = lesson.video.sourceUrl;
+    videoLink.target = "_blank";
+    videoLink.rel = "noopener noreferrer";
+    videoLink.textContent = "Open this video on YouTube";
+    video.append(videoTitle, videoDescription, frame, videoLink);
+    section.append(video);
   }
 
   const review = document.createElement("div");
